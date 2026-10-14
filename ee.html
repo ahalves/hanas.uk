@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>adam ivan hanas-alves</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: black;
+            --text: orange;
+            --accent: cyan;
+            color-scheme: dark;
+        }
+
+        body {
+            margin: 0;
+            padding: clamp(1rem, 4vw, 3rem);
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Geist Mono", ui-monospace, monospace;
+            line-height: 1.5;
+            overflow-wrap: break-word;
+            opacity: 0;
+        }
+
+        body.fonts-loaded {
+            animation: fadein 0.5s ease-out forwards;
+            animation-delay: 0.1s;
+        }
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            body.fonts-loaded {
+                animation: none;
+                opacity: 1;
+            }
+        }
+
+        em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .bold { font-weight: 700; }
+
+	.box {
+            width: fit-content;
+            max-width: 100%;
+            padding: 0.4em 0.8em;
+            border: 1px solid var(--accent);
+        }
+
+        h1 {
+   	    font-size: clamp(2.5rem, 12vw, 7rem);
+    	    line-height: 1.1;
+  	    margin: 0 0 0.3em;
+	}
+
+	h3 {
+    	    font-size: 1.25rem;
+	}
+
+        img {
+            width: 1em;
+            height: 1em;
+            vertical-align: middle;
+            transform: translateY(-0.12em);
+        }
+
+        ul {
+   	    list-style: none;
+    	    padding-left: 0;
+    	    font-size: 1.25rem;
+	}
+
+	ul li {
+   	    padding: 0.6em 0;
+	}
+
+	ul li + li {
+    	    border-top: 1px solid var(--text);
+	}
+
+        time::before,
+        time::after {
+            content: "|";
+            content: "|" / "";  
+            color: var(--accent);
+        }
+
+        time::before { margin-right: 0.5em; }
+        time::after  { margin-left: 0.5em; }
+    </style>
+
+    <noscript>
+        <style>body { opacity: 1; }</style>
+    </noscript>
+</head>
+<body>
+    <h1 class="bold">adam ivan <em>hanas-alves</em></h1>
+    <h3><em>★ welcome ★</em> to my website!</h3>
+    <h3>below you'll find the journal, dates following the wonderful <em>ISO 8601</em> for your pleasure, dearest surfer</h3>
+    <h3>the journal (assuming i reach my 18th birthday lmao):</h3>
+
+    <ul>
+        <li><time class="bold">2026-12-08</time> my 18th birthday</li>
+    </ul>
+
+    <p>did you really think i'd use ai on this site? <img src="noai.webp" alt=""></p>
+
+    <script>
+        document.fonts.ready.then(() => {
+            document.body.classList.add("fonts-loaded");
+        });
+    </script>
+</body>
+</html>
